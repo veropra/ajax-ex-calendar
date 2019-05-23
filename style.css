@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lobster', cursive;
+  height: 200vh;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.name{
+  font-size: 50px;
+  color: #e84393;
+  margin-bottom: 10px;
+}
+
+#mese_corrente{
+  margin: 20px auto;
+}
+
+li{
+  font-size: 20px;
+}
+
+.precedente, .successivo {
+  padding: 10px;
+  margin: 20px 100px;
+  background-color: #e84393;
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  border: 2px solid black;
+  cursor: pointer;
+}
