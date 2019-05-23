@@ -25,14 +25,5 @@ $(document).ready(function(){
     $('#calendar').append('<li>' + giorno + '</li>');
 
   }
- //Creo una funzione moveMonth per far scorrere i mesi includendo il bottone successivo
- //e precedente
-  function moveMonth(button) {
-    if (button.includes('successivo') && monthCount < december) {
-      monthCount++;
-    } else if (button.includes('precedente') && monthCount > january) {
-      monthCount--;
-    }
-  };
-
+ 
 });
