@@ -2,17 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>ajax-ex-calendar</title>
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!--ajax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <!--moment js-->
     <script src="https://momentjs.com/downloads/moment.min.js"></script>
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!--googlefont-->
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!--handlebars-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <!--css-->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -22,8 +21,8 @@
       <div class="name">Calendar 2018</div>
       <h1 id="mese_corrente"></h1>
       <div class="button-click">
-        <button class="precedente"><i class="fas fa-angle-double-left"></i> Mese precedente</button>
-        <button class="successivo">Mese successivo <i class="fas fa-angle-double-right"></i></button>
+        <button id="precedente"><i class="fas fa-angle-double-left"></i> Mese precedente</button>
+        <button id="successivo">Mese successivo <i class="fas fa-angle-double-right"></i></button>
       </div>
       <ul id="calendar">
       </ul>
@@ -31,5 +30,10 @@
 
     <!--js-->
     <script src="script.js"></script>
+    <!--handlebars template-->
+    <script id="template_giorno" type="text/x-handlebars-template">
+      <li>{{giorno_template}}</li>
+    </script>
+
   </body>
 </html>

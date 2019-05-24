@@ -32,7 +32,7 @@ li{
   font-size: 20px;
 }
 
-.precedente, .successivo {
+#precedente, #successivo {
   padding: 10px;
   margin: 20px 100px;
   background-color: #e84393;
