@@ -90,8 +90,8 @@ $(document).ready(function(){
           }
         });
       },
-        'error': function () {
-          alert('errore');
+        error: function () {
+          alert('errore!!!!!');
         }
     });
   }
