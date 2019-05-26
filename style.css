@@ -42,3 +42,8 @@ li{
   border: 2px solid black;
   cursor: pointer;
 }
+
+.red {
+  color: red;
+  font-weight: bold;
+}

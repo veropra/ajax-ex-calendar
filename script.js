@@ -60,4 +60,39 @@ $(document).ready(function(){
     }
     return day;
   }
+
+  //Chiamata ajax
+  function ajaxCall () {
+
+    meseTot = current_date.month();
+    mese = current_date.format('MMMM');
+
+    $.ajax ({
+      url: 'https://flynn.boolean.careers/exercises/api/holidays',
+      method: 'GET',
+      data: {
+        year: anno,
+        month: meseTot
+      },
+      success: function (data) {
+
+        var festivita = data.response;
+
+        $('#calendar').each(function (){
+
+          var data_mese = $(this).attr('data_single_day');
+
+          for (var i = 0; i < festivita.length; i++) {
+
+            if (festivita[i].date == data_mese) {
+              $(this).addClass('.red');
+            }
+          }
+        });
+      },
+        'error': function () {
+          alert('errore');
+        }
+    });
+  }
 });
