@@ -80,7 +80,7 @@ $(document).ready(function(){
 
         $('#calendar').each(function (){
 
-          var data_mese = $(this).attr('data_single_day');
+          var data_mese = $(this).attr('single_day');
 
           for (var i = 0; i < festivita.length; i++) {
 
