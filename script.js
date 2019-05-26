@@ -15,6 +15,7 @@ $(document).ready(function(){
     if(current_date.isSameOrAfter(max_date)){
       alert('Non puoi andare nel 2019!');
       $(this).attr('disabled', true);
+      ajaxCall();
     } else {
       current_date.add(1, 'months');
       disegna_mese(current_date);
@@ -27,6 +28,7 @@ $(document).ready(function(){
     if(current_date.isSameOrBefore(min_date)){
       alert('Non puoi andare nel 2017!');
       $(this).attr('disabled', true);
+      ajaxCall();
     } else {
       current_date.subtract(1, 'months');
       disegna_mese(current_date);
@@ -80,12 +82,15 @@ $(document).ready(function(){
 
         $('#calendar').each(function (){
 
-          var data_mese = $(this).attr('single_day');
+          var data_mese = $(this).attr('data_single_day');
 
           for (var i = 0; i < festivita.length; i++) {
 
             if (festivita[i].date == data_mese) {
               $(this).addClass('.red');
+              var festivita_day = moment(festivita[i].date).format('DD MMMM');
+              var dayWeekFestivity = moment(festivita_day).format('dddd');
+              $(this).html(festivita_day + dayWeekFestivity);
             }
           }
         });
